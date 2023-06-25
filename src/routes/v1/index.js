@@ -1,9 +1,8 @@
-const express = require('express');
-
-const { InfoController } = require('../../controllers');
-
+const express = require("express");
 const router = express.Router();
 
-router.get('/info', InfoController.info);
+const { EmailController } = require("../../controllers");
+
+router.post("/tickets", EmailController.create);
 
 module.exports = router;
